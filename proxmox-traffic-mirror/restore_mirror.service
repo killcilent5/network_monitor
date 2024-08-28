@@ -1,0 +1,9 @@
+
+[Unit]
+Description=Restore traffic mirror
+After=network-online.target
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/mirror.sh vmbr0 tap100i0
+[Install]
+WantedBy=multi-user.target
